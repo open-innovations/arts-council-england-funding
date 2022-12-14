@@ -1,0 +1,12 @@
+layout: template/base.njk
+date: Git Last Modified
+
+# Automatically adds meta and social tags 
+# See https://lume.land/plugins/metas/
+metas:
+  site: Arts Council England Funding
+  description: A visualisation of Arts Council England funding
+  image: https://open-innovations.org/resources/images/logos/oi-square.png
+  twitter: openinnovates
+  lang: en
+  keywords: [open, data, leeds, innovation]
