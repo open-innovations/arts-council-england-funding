@@ -1,0 +1,12 @@
+.top-spacer {
+  height: var(--header-height);
+  width: 100%;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+.social-icon {
+  max-width: 3em;
+}

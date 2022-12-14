@@ -1,0 +1,33 @@
+.chart-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family: var(--title-fontstack);
+}
+
+.plot {
+  --plot-fill: var(--l23-mint);
+}
+
+.grid {
+  stroke: #aaa;
+  &.x {
+    stroke-dasharray: 7 4;
+  }
+}
+.axis {
+  stroke: #aaa;
+}
+
+/* Outline zero valued hexes in black */
+.hexmap [data-value="0"] path {
+  stroke: var(--l23-dark-blue-grey);
+  stroke-width: 3px;
+}
+
+.chart {
+  --colour:#eee;
+  --plot-background:var(--l23-dark-blue-grey);
+  & .line {
+    stroke-width: 2px;
+  }
+}

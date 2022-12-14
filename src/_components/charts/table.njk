@@ -1,0 +1,32 @@
+---
+css: |
+  .scroll-table {
+    overflow-x: auto;
+  }
+  .scroll-table > table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+---
+<div class="scroll-table">
+<table>
+  <thead>
+    <tr>
+        {% for column in columns %}
+        <th id='{{ column.key }}'>
+            {{ column.name }}
+        </th>
+        {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+      <tr>
+        {% for column in columns %}
+          <td>{{ row[column.key] }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>

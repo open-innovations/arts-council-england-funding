@@ -1,9 +1,3 @@
-@charset "utf-8";
-/* These are imported by the PostCSS processor. Source is in the `_includes/css` folder */
-@import 'css/reset.css';
-@import 'css/general.css';
-@import 'css/search.css';
-
 @font-face {
 	font-family: 'Poppins';
 	font-style: italic;

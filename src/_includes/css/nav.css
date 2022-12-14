@@ -1,0 +1,15 @@
+.menu-burger {
+  & i {
+    background-color: white;
+  }
+}
+.menu-items {
+  background-color: var(--background-colour);
+  list-style: none;
+  & > li + li {
+    margin-top: 0.5em;
+    @media screen and (min-width: 800px) {
+      margin-top: 0;
+    }
+  }
+}
