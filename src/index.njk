@@ -1,12 +1,18 @@
 ---
 title: Arts Council England funding per unit population
 ---
+<p>Arts Council England publish <a href="https://www.artscouncil.org.uk/ProjectGrants/project-grants-data">data</a> about <a href="https://www.artscouncil.org.uk/ProjectGrants">National Lottery Funding Grants.</a> Currently, the data contains grants awarded between April 2018 and August 2022. Each UK grant is asscosiated with a Local Authority. This means an estimate for total funding recieved per person by Local Authority can be calculalated using <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland">population statistics</a> from the ONS. For all below figures, population statistics from 2020 have been used.</p>
 
-<p>Arts Council England gave a total of <strong>{{arts_council.stats.total_count | localize}}</strong> grants worth at total of <strong>£{{arts_council.stats.total_sum | localize}}</strong>.</p>
-<p>A total of <strong>{{arts_council.stats.uk_count | localize}}</strong> went to organisations in the UK, worth at total of <strong>£{{arts_council.stats.uk_sum | localize}}</strong>.</p>
-<p>A total of <strong>{{arts_council.stats.england_count | localize}}</strong> went to organisations in England, worth at total of <strong>£{{arts_council.stats.england_sum | localize}}</strong>. 
-Engalnd has a population of <strong>{{arts_council.stats.england_population | localize}}</strong> so this equates to <strong>£{{(arts_council.stats.total_sum / arts_council.stats.england_population) | round(2) | localize}}</strong> per person.</p>
-<p>Hexmap showing the total amount of funding recieved from Arts Council England (from April 2018 to August 2022) per person by Local Authority.</p>
+<h2>Overview</h2>
+<ul>
+<li>From the beginning of April 2018 to the end of August 2022 Arts Council England gave a total of <strong>{{arts_council.stats.total_count | localize}}</strong> grants worth at total of <strong>£{{arts_council.stats.total_sum | localize}}</strong>.</li>
+<li>A total of <strong>{{arts_council.stats.uk_count | localize}}</strong> went to organisations in the UK, worth at total of <strong>£{{arts_council.stats.uk_sum | localize}}</strong>.</li>
+<li>A total of <strong>{{arts_council.stats.england_count | localize}}</strong> went to organisations in England, worth at total of <strong>£{{arts_council.stats.england_sum | localize}}</strong>. 
+Engalnd has a population of <strong>{{arts_council.stats.england_population | localize}}</strong> so this equates to <strong>£{{(arts_council.stats.total_sum / arts_council.stats.england_population) | round(2) | localize}}</strong> per person.</li>
+</ul>
+
+<h2>By Local Authority</h2>
+
 {% from 'macros.njk' import dateFormatter %}
 {%- macro popupCountTotal(params) -%}
   {{ params.label }}</br>£
@@ -26,10 +32,15 @@ Engalnd has a population of <strong>{{arts_council.stats.england_population | lo
       title: 'Arts Council Funding by Local Authority Per Capita'
     }) | safe }}
 
+    
+
 </div>
 </div>
 
-<p>Map showing the total amount of funding recieved from Arts Council England (from April 2018 to August 2022) per person by Region.</p>
+<p>Hexmap showing the total amount of funding recieved from Arts Council England (from April 2018 to August 2022) per person by Local Authority.</p>
+
+<h2>By Region</h2>
+
 {%- macro popup_text(label, value, total) -%}
   £{{value}} total funding per person in {{ label }}
 {%- endmacro -%}
@@ -44,3 +55,11 @@ Engalnd has a population of <strong>{{arts_council.stats.england_population | lo
 
 </div>
 </div>
+
+<p>Map showing the total amount of funding recieved from Arts Council England (from April 2018 to August 2022) per person by English Region.</p>
+
+<h2>Data used</h2>
+<ul>
+<li><a href="https://www.artscouncil.org.uk/ProjectGrants/project-grants-data">Arts Council England Funding Data</a></li>
+<li><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland">Population Statstics</a> - 'Mid 2020 edition' has been used.</li>
+</ul>
