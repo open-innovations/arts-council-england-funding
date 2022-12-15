@@ -1,14 +1,14 @@
 ---
 title: Arts Council England funding per unit population
 ---
-<p>Arts Council England publish <a href="https://www.artscouncil.org.uk/ProjectGrants/project-grants-data">data</a> about <a href="https://www.artscouncil.org.uk/ProjectGrants">National Lottery Funding Grants.</a> Currently, the data contains grants awarded between April 2018 and August 2022. Each UK grant is asscosiated with a Local Authority. This means an estimate for total funding recieved per person by Local Authority can be calculalated using <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland">population statistics</a> from the ONS. For all below figures, population statistics from 2020 have been used.</p>
+<p>Arts Council England publishes <a href="https://www.artscouncil.org.uk/ProjectGrants/project-grants-data">data</a> about <a href="https://www.artscouncil.org.uk/ProjectGrants">National Lottery Funding Grants.</a> Currently, the data contains grants awarded between April 2018 and August 2022. Each UK grant is associated with a Local Authority. This means an estimate for total funding received per person by Local Authority can be calculated using <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland">population statistics</a> from the ONS. For all below figures, population statistics from 2020 have been used.</p>
 
 <h2>Overview</h2>
 <ul>
 <li>From the beginning of April 2018 to the end of August 2022 Arts Council England gave a total of <strong>{{arts_council.stats.total_count | localize}}</strong> grants worth a total of <strong>£{{arts_council.stats.total_sum | localize}}</strong>.</li>
 <li>A total of <strong>{{arts_council.stats.uk_count | localize}}</strong> went to organisations in the UK, worth a total of <strong>£{{arts_council.stats.uk_sum | localize}}</strong>.</li>
 <li>A total of <strong>{{arts_council.stats.england_count | localize}}</strong> went to organisations in England, worth a total of <strong>£{{arts_council.stats.england_sum | localize}}</strong>. 
-Engalnd has a population of <strong>{{arts_council.stats.england_population | localize}}</strong> so this equates to <strong>£{{(arts_council.stats.total_sum / arts_council.stats.england_population) | round(2) | localize}}</strong> per person.</li>
+England has a population of <strong>{{arts_council.stats.england_population | localize}}</strong> so this equates to <strong>£{{(arts_council.stats.total_sum / arts_council.stats.england_population) | round(2) | localize}}</strong> per person.</li>
 </ul>
 
 <h2>By Local Authority</h2>
