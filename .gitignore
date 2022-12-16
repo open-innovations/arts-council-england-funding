@@ -5,3 +5,6 @@ _site/
 _bin/
 
 deno.lock
+
+#working
+working/
