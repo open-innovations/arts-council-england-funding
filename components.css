@@ -1,0 +1,35 @@
+
+  .hexmap {
+    --hex-bg: none;
+    --hex-fill: var(--l23-cyan);
+    background: var(--hex-bg);
+    vector-effect: non-scaling-stroke;
+  }
+
+.hexmap .hex path {
+        fill: var(--hex-fill);
+        transform: scale(0.95);
+        transition: transform 0.1s linear;
+      }
+
+.hexmap .hex:hover path {
+        transform: scale(0.90);
+      }
+
+.uk-map {
+  overflow: hidden;
+  position: relative;
+  left: -0.5px;
+  top: -0.5px;
+}
+
+.uk-map path {
+  --fill: rgba(220,220,220,0.5);
+  fill: var(--fill);
+  fill-rule: evenodd;
+  stroke: #3DF2BA;
+  stroke-opacity: 1;
+  stroke-width: 0.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
